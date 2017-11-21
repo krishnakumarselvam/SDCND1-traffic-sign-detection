@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! 
 
@@ -29,7 +29,7 @@ I used the pandas library to calculate summary statistics of the traffic signs d
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
+#### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. Here we look at the distribution of classes among the training and validation set. It looks like the classes are generally distributed the same way between the two sets. I didn't have to rebalance classes for this project, but that's something to look out for.
 
@@ -39,7 +39,7 @@ Below is a sample of images and their classes from the training dataset.
 
 <img src="img/sample.png" width="480" />
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
 ####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. 
 
@@ -66,22 +66,27 @@ Example of the changes from the `add_jitter` function:
 <img src="img/augmented_data.png" width="480" />
 
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x5 	|
+| Max pooling	      	| 1x1 stride, same padding, outputs 32x32x5		|
+| Convolution 3x3	    | 1x1 stride, same padding, outputs 32x32x10	|
+| Max pooling	      	| 1x1 stride, same padding, outputs 32x32x10	|
+| Convolution 3x3	    | 1x1 stride, same padding, outputs 32x32x20	|
+| Max pooling	      	| 1x1 stride, same padding, outputs 32x32x20	|
+| Dropout 				| keep_prob = 0.5								|
+| Convolution 5x5	    | 1x1 stride, valid padding, outputs 28x28x25	|
+| Max pooling	      	| 2x2 stride, valid padding, outputs 14x14x25	|
+| Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x30	|
+| Max pooling	      	| 2x2 stride, valid padding, outputs 5x5x30		|
+| Flattening			| Flattens to output a layer with 750 neurons	|
+| Fully connected (relu)| Contains 43 neurons        					|
+| Fully connected, softmax | Output layer	       						|
 
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
