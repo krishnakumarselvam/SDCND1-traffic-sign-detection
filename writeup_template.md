@@ -131,6 +131,6 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. 
 
-The top 5 classes and the associated predicted probabilities are listed here. It looks like the model is able to predict the correct class with a high probability (~ 100 %) in each case. 
+The top 5 classes and the associated predicted probabilities are listed here. It looks like the model is able to predict the correct class with a high probability (~ 100 %) in each case, exept for the one with pedestrians where the predicted probability is ~90 %.
 
 <img src="img/top_5_prediction.png"/> 
