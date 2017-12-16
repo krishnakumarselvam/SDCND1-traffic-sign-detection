@@ -114,11 +114,11 @@ I spent a lot of time playing around with the LeNet architecture. However, I kep
 
 Here are five German traffic signs that I found on the web:
 
-<img src="new_images/img1.jpeg" width="480" />
-<img src="new_images/img2.jpg" width="480" />
-<img src="new_images/img3.jpeg" width="480" />
-<img src="new_images/img4.jpeg" width="480" />
-<img src="new_images/img5.jpeg" width="480" />
+<img src="new_images/img1.jpeg" width="240" />
+<img src="new_images/img2.jpg" width="240" />
+<img src="new_images/img3.jpeg" width="240" />
+<img src="new_images/img4.jpeg" width="240" />
+<img src="new_images/img5.jpeg" width="240" />
 
 
 The first image might be difficult to classify because ...
