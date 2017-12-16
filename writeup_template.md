@@ -101,11 +101,11 @@ My final model consisted of the following layers:
 <img src="img/training.png" width="480" />
 
 My final model results were:
-* training set accuracy of 99.86 %
-* validation set accuracy of 97.35 %
-* test set accuracy of 94.1 %
+* training set accuracy of 99.7 %
+* validation set accuracy of 96.1 %
+* test set accuracy of 95.0 %
 
-I spent a lot of time playing around with the lenet architecture. However, I kept overfitting the training set as my validation accuracy was always 10 % pts less than the training accuracy. No amount of adding drop out layers fixed that issue. So I started cutting down on the depth of the convolutional layers. I also drastically reduced the size of the final fully connected layers to bring down the number of parameters by several orders of magnitude. 
+I spent a lot of time playing around with the LeNet architecture. However, I kept overfitting the training set as my validation accuracy was always 10 % pts less than the training accuracy. No amount of adding drop out layers fixed that issue. So I started cutting down on the depth of the convolutional layers. I also drastically reduced the size of the final fully connected layers to bring down the number of parameters by several orders of magnitude. 
  
 
 ###Test a Model on New Images
