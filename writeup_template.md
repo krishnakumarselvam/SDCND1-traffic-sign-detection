@@ -89,14 +89,14 @@ My final model consisted of the following layers:
 | Fully connected, softmax | Output layer	       						|
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 * I trained the model for 25 epochs using the Adam optimizer. 
 * I started with a learning rate of 0.001
 * At every 10th epoch, I halved the learning rate. 
 * I used a batch size of 128
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 <img src="img/training.png" width="480" />
 
@@ -108,14 +108,18 @@ My final model results were:
 I spent a lot of time playing around with the LeNet architecture. However, I kept overfitting the training set as my validation accuracy was always 10 % pts less than the training accuracy. No amount of adding drop out layers fixed that issue. So I started cutting down on the depth of the convolutional layers. I also drastically reduced the size of the final fully connected layers to bring down the number of parameters by several orders of magnitude. 
  
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+<img src="img/new_images/img1.jpeg" width="480" />
+<img src="img/new_images/img2.jpg" width="480" />
+<img src="img/new_images/img3.jpeg" width="480" />
+<img src="img/new_images/img4.jpeg" width="480" />
+<img src="img/new_images/img5.jpeg" width="480" />
+
 
 The first image might be difficult to classify because ...
 
