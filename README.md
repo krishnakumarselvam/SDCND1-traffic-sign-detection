@@ -8,9 +8,9 @@ In this project, the goal is to train and validate a model so it can classify tr
 Here are the relevant files. Note (I split up the proect into 3 notebooks for readability)
 
 * Ipython notebooks
-	*[Part 1 - Data processing and augmentation](Part_1_Data_processing_and_augmentation.ipynb)
-	*[Part 2 - Training the classifier](Part_2_building_model.ipynb)
-	*[Part 3 - Model diagnostics](Part_3_Model_diagnostics.ipynb)
+	* [Part 1 - Data processing and augmentation](Part_1_Data_processing_and_augmentation.ipynb)
+	* [Part 2 - Training the classifier](Part_2_building_model.ipynb)
+	* [Part 3 - Model diagnostics](Part_3_Model_diagnostics.ipynb)
 * the code exported as an html file
 * [write up](writeup_template.md)
 
